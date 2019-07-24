@@ -12,5 +12,6 @@ module.exports = {
             password: 'password',
             accounts: []
         }
-    ]
+    ],
+    transactions: []
 };
