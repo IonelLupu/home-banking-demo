@@ -2,7 +2,7 @@ module.exports = class Account {
     constructor(currency, type, amount,iban) {
         this.currency = currency;
         this.type = type;
-        this.amount = amount;
+        this.amount = amount || 0;
         this.iban = iban || Account.getIBAN();
     }
 

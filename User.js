@@ -1,7 +1,8 @@
 const Account = require("./Account");
 
 module.exports = class User {
-    constructor(username, password, accounts) {
+    constructor(id, username, password, accounts) {
+        this.id = id;
         this.username = username;
         this.password = password;
         this.accounts = accounts.map(account => {
@@ -28,6 +29,6 @@ module.exports = class User {
             throw new Error('The account is not empty and cannot be deleted');
         }
 
-        user.accounts.splice(accountIndex, 1);
+        this.accounts.splice(accountIndex, 1);
     }
 };
